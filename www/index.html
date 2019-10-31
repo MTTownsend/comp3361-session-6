@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Application Lifecycle Test</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="js/index.js"type="text/javascript" charset="utf-8"></script>
+	<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+	<link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>App Statistics</h1>
+  </div>  
+  <div data-role="main" class="ui-content">
+  	<h1>Event counts</h1>
+	<div id="launched"></div>
+	<div id="paused"></div>
+	<div id="resumed"></div>
+  </div>
+	
+  <div data-role="footer">	
+    <p>Welcome! click on the link below to see Inventory or Nutritional Value.</p>
+    <a href="#pagetwo">Inventory</a>
+	<a href="#pagethree">Nutritional Value</a>
+  </div>
+</div> 
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>Inventory</h1>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+	<p>
+	Drink: <span id="myDrink"> I got nothin Boss</span>
+	<br>
+	Phone: <span id="myPhone"> I got nothin Boss</span>
+	<br>
+	Money: <span id="myMoney"> I got nothin Boss</span>
+	<br>
+	Cards: <span id="myCards"> I got nothin Boss</span>
+	<br>
+	Bag: <span id="myBag"> I got nothin Boss</span>
+	</p>
+  </div>
+  
+  <div data-role="footer">	
+    <p>Welcome! click on the link below to see App Statistics or Nutritional Value.</p>
+    <a href="#pageone">App Statistics</a>
+	<a href="#pagethree">Nutritional Value</a>
+  </div>
+</div> 
+
+<div data-role="page" id="pagethree">
+  <div data-role="header">
+    <h1>Nutritional Value</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<p>
+	Diet Coke Nutritional values
+	<table>
+	<tr>
+		<th>Per :</th>
+		<th><span id="my_dietCoke_Dose"> I got nothin Boss</span></th>
+	</tr>
+	<tr>
+		<td>Energy :</td>
+        <td><span id="my_dietCoke_Energy1"> I got nothin Boss</span></td>
+	</tr>
+	<tr>
+		<td></td>
+	    <td><span id="my_dietCoke_Energy2"> I got nothin Boss</span></td>          
+	</tr>
+	<tr>
+		<td>Carbs :</td>
+	    <td><span id="my_dietCoke_CarbTot"> I got nothin Boss</span></td>
+	</tr>
+	<tr>
+		<td>of which sugars :</td>
+		<td><span id="my_dietCoke_CarbSug"> I got nothin Boss</span></td>
+	</tr>
+	</table>
+  </div>
+  
+  <div data-role="footer">	
+    <p>Welcome! click on the link below to see App Statistics or Inventory.</p>
+    <a href="#pageone">App Statistics</a>
+	<a href="#pagetwo">Inventory</a>
+  </div>
+</div>
+
+</body>
+</html>
