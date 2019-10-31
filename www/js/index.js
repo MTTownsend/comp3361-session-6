@@ -22,6 +22,12 @@ function updateDisplay() {
 		$.mobile.page.prototype.options.addBackBtn = true;
 	});
 	
+	$(document).on("pagecreate","#pagefour",function(){
+		$('#submitButton').on("click", function(){
+			submitText();
+		});
+	});
+	
 }
 
 
@@ -31,8 +37,6 @@ function updateDisplay() {
 	
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
-		
-		//document.addEventListener("backbutton", onBackFunction, false);
 
 		launched_count++;
 		addToStorage();
@@ -44,9 +48,7 @@ function updateDisplay() {
 		alert("device ready");
 	}
 	
-	/*function onBackFunction() {
-		
-	}*/
+	
 
 
 	function onPause() {
@@ -146,5 +148,29 @@ function updateDisplay() {
 		key = "Diet Coke";
 		value = JSON.stringify(dietCoke);
 		window.localStorage.setItem(key, value);
+	}
+	
+		$(document).on("pagecreate","#pageone",function(){
+			$('#submitButton').on("click", function(){
+				submitText();
+			});            
+		});            
+
+
+	function submitText() {
+		var text = $('#textinput').val();
+		storeValue("Input",text);
+		getTextValue();
+		alert(text);
+	}
+
+	function storeValue(key, value) {
+		//add some code to store the key-value pair in persistant storage 
+		window.localStorage.setItem(key, value);
+	}
+	
+	function getTextValue(){
+		value = window.localStorage.getItem("Input");
+		$("#myInput").text(value);
 	}
 	
